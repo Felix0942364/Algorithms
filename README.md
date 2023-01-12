@@ -1,1 +1,2 @@
-# Repository for Algorithm Studies from BaekJun Solving Academy
+# Repository for Algorithm Studies
+## Especially for BaekJun Solving Academy
