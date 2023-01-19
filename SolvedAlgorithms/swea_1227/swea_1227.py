@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("github\Algorithms\SolvedAlgorithms\swea_high3\swea_high3_input.txt", "r")
+sys.stdin = open("Algorithms\SolvedAlgorithms\swea_1227\swea_1227_input.txt", "r")
 
 def call_map_array():
     map_lst = list(input())
