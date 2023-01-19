@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("github\Algorithms\SolvedAlgorithms\swea_hight1_input.txt", "r")
+sys.stdin = open("github\Algorithms\SolvedAlgorithms\swea_high1\swea_hight1_input.txt", "r")
 
 def add_dict(dct, occ, val, case):
     occ = tuple(occ)
@@ -22,9 +22,9 @@ def solve(num, weights):
                     if j+1 in occu:
                         continue
                     else:
-                        add_dict(cycle_queue, {j+1}|set(occu), val+weights[j], case)
+                        add_dict(cycle_queue, sorted(occu+(j+1,)), val+weights[j], case)
                         if val - weights[j] >= 0:
-                            add_dict(cycle_queue, {j+1}|set(occu), val-weights[j], case)
+                            add_dict(cycle_queue, sorted(occu+(j+1,)), val-weights[j], case)
         queue = cycle_queue
     print(f'#{test_case} {sum(queue[tuple(range(num+1))].values())}')
 
