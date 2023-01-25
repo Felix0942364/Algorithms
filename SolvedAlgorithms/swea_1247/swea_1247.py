@@ -40,6 +40,6 @@ def solve(test_case):
     print(f'#{test_case} {find_min_path(people, coordinates)}')
 
 T = int(input())
-T = 10
+
 for test_case in range(1, T + 1):
     solve(test_case)
