@@ -13,8 +13,7 @@ class TreeNode:
 
     def build_tree(self, lst):
         while lst:
-            parent_node = lst.pop(0)
-            child_node = lst.pop(0)
+            parent_node, child_node = lst.pop(0)
             self.insert(parent_node, child_node)
         return self
 
@@ -61,10 +60,17 @@ class TreeNode:
                 break
         return len(stack1)+1 + len(stack2)+1
 
+def call_tree_data(lst):
+    tmp_lst = list()
+    while lst:
+        tmp_lst.append((lst.pop(0),lst.pop(0)))
+    return sorted(tmp_lst)
+
 def solve(test_case):
     N, E , key1, key2 = map(int, input().split())
-    tree_data = list(map(int, input().split()))
-    root = TreeNode(tree_data[0])
+    tree_data = call_tree_data(list(map(int, input().split())))
+    print(tree_data)
+    root = TreeNode(1)
     root.build_tree(tree_data)
     print(f'#{test_case} {root.common_ancestor(key1, key2)}')
 
