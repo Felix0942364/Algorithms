@@ -40,7 +40,6 @@ def find_path(start, goal, array, size):
 
 def solve(start, goal):
     (array, size) = call_map_array()
-    print(array)
     return find_path(start, goal, array, size)
 
 T = 10
