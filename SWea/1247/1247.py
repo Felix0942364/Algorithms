@@ -32,7 +32,7 @@ def find_min_path(people, coordinates):
                 if value < res:
                     queue.append((value + case_dict[route[-1]][idx], route + [idx]))
     return res
-    
+
 # shell to call input
 def solve(test_case):
     people = int(input())
