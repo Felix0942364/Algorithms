@@ -32,7 +32,7 @@ for (gender, position) in cases:
     turn_switch(gender, position, switch_list, number_of_switch)
 
 for i in range(1, len(switch_list)+1):
-    if i % 20 == 0:
-        print(switch_list[i-1])
-    else:
+    if i % 20:
         print(switch_list[i-1], end=' ')    
+    else:
+        print(switch_list[i-1])

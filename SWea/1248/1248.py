@@ -1,5 +1,6 @@
 import sys
-sys.stdin = open("SolvedAlgorithms\swea_1248\swea_1248_input.txt", "r")
+sys.stdin = open("1248_input.txt", "r")
+
 
 class Graph():
     def __init__(self, node):
@@ -45,9 +46,11 @@ def solve(test_case):
     data_lst = list(map(int, input().split()))
     graph1 = Graph(N)
     graph1.build_graph(data_lst)
+    print(graph1.dic)
     commen_root = graph1.commen_graph(val1, val2)
     print(f'#{test_case} {commen_root} {graph1.size(commen_root)}')
 
 T = int(input())
+
 for test_case in range(1, T + 1):
     solve(test_case)
