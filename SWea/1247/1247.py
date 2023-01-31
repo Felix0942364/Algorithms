@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("SolvedAlgorithms\swea_1247\swea_1247_input.txt", "r")
+sys.stdin = open("1247_input.txt", "r")
 
 def build_dict(people, coordinates):
     tmp_dict = dict()

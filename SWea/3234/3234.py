@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("github\Algorithms\SolvedAlgorithms\swea_3234\swea_3234_input.txt", "r")
+sys.stdin = open("3234_input.txt", "r")
 
 def add_dict(dct, occ, val, case):
     occ = tuple(occ)

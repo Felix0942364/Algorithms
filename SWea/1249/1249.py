@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("SolvedAlgorithms\swea_1249\swea_1249_input.txt", "r")
+sys.stdin = open("1249_input.txt", "r")
 
 def build_map(map_size):
     map_array = list()
