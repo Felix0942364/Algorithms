@@ -31,13 +31,13 @@ class Graph():
                         check += 1
         return tmp_lst
 
-    def size(self, value):
+    def size(self, root):
         tmp = 1
-        if not self.dic[value]:
+        if not self.dic[root]:
             return tmp
         else:
-            for child_branch in self.dic[value]:
-                tmp += self.size(child_branch)
+            for sub_tree in self.dic[root]:
+                tmp += self.size(sub_tree)
             return tmp
 
 def solve(test_case):
@@ -47,7 +47,6 @@ def solve(test_case):
     graph1.build_graph(data_lst)
     commen_root = graph1.commen_graph(val1, val2)
     print(f'#{test_case} {commen_root} {graph1.size(commen_root)}')
-
 
 T = int(input())
 for test_case in range(1, T + 1):
