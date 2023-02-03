@@ -17,7 +17,7 @@ def min_path_value(map_size, map_array):
     visited = [(0,0,0)]
     to_visit = [1]*map_size**2
     while visited:
-        val, x, y = visited.pop(0)
+        val, x, y = visited.pop(visited.index(min(visited)))
         if (x, y) == (map_size-1, map_size-1):
             return val
         tmp_lst = list()
@@ -26,7 +26,6 @@ def min_path_value(map_size, map_array):
         tmp_lst += [validation(val, x, y+1)]
         tmp_lst += [validation(val, x, y-1)]
         visited += list(filter(None,tmp_lst))
-        visited.sort()
 
 def solve(test_case):
     map_size = int(input())
