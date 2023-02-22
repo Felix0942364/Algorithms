@@ -1,6 +1,6 @@
 import sys
-from collections import deque
 sys.stdin = open("1226_input.txt", "r")
+from collections import deque
 
 def call_map_array():
     map_lst = [list(map(int, input()))]
