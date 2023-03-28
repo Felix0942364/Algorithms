@@ -37,3 +37,4 @@ for test_case in range(1, 1+T):
                         continue
                     honey((r_1, c_1), (r_2, c_2), M, C)
     print('#{} {}'.format(test_case, answer))
+ 
