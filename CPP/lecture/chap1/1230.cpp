@@ -18,17 +18,14 @@ private:
 	Node* tail;
 	vector<Node*> nodeArr;
 	int nodeCnt;
-
 public:
 	LinkedList() : head(nullptr), tail(nullptr), nodeCnt(0) {
 		nodeArr.resize(NODE_MAX, nullptr);
 	}
-
 	Node* getNewNode(int data) {
 		nodeArr[nodeCnt] = new Node(data);
 		return nodeArr[nodeCnt++];
 	}
-
 	void insert(int idx, const vector<int>& nums) {
 		int st = 0;
 		if (idx == 0) {
@@ -53,7 +50,6 @@ public:
 		}
 		if (cur->next == nullptr) tail = cur;
 	}
-
 	void remove(int idx, int cnt) {
 		Node* cur = head;
 		if (idx == 0) {
@@ -67,14 +63,12 @@ public:
 		anchor->next = cur->next;
 		if (anchor->next == nullptr) tail = anchor;
 	}
-
 	void add(int data) {
 		Node* cur = tail;
 		Node* newNode = getNewNode(data);
 		cur->next = newNode;
 		tail = newNode;
 	}
-
 	void print() {
 		int cnt = 10;
 		Node* cur = head;
@@ -89,14 +83,12 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
-
 	int T = 10;
 	for (int t = 1; t <= T; t++) {
 		LinkedList list;
 		cout << "#" << t << " ";
 		int N;
 		cin >> N;
-
 		vector<int> initArr(N);
 		for (int i = 0; i < N; i++) cin >> initArr[i];
 		list.insert(0, initArr);
