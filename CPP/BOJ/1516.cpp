@@ -16,8 +16,7 @@ int main() {
 	for (int i = 0; i < MAX_NODE; i++) {
 		build_time[i] = -1;
 		real_time[i] = -1;
-		for (int j = 0; j < MAX_NODE; j++)
-			build_order[i][j] = -1;
+		for (int j = 0; j < MAX_NODE; j++) build_order[i][j] = -1;
 	}
 
 	for (int i = 0; i < N; i++) {
